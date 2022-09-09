@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    binding.pry
     if @comment.save
       redirect_to prototype_path(params[:prototype_id])
     end
